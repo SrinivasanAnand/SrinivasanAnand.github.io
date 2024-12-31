@@ -1,17 +1,89 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anand Srinivasan</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Index</title>
-    <link rel="icon" type="image/x-icon" href="img/icon.png">
 </head>
-<body style="background-color:#FFFAFA;">
-    <div id="mainTexDiv">
-        <h1 id="mainText">Anand Srinivasan</h1>
-    </div>
+<body>
+    <header>
+        <div class="rect">
+            <div class="name_and_info">
+                <h1>Anand Srinivasan</h1>
+                <div class="horizontal_line"></div>
+                <h3>anand.srinivasan [at] yale.edu</h3>
+                <div class="icons">
+                    <a href="https://github.com/SrinivasanAnand" target="_blank">
+                        <img src="imgs/gh_icon.png" alt="Icon 1" class="gh-icon">
+                    </a>
+                    <a href="cv.pdf" target="_blank">
+                        <img src="imgs/doc_icon.png" alt="Icon 2" class="doc-icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/anandsrinivasan16/" target="_blank">
+                        <img src="imgs/LinkedIn_icon.png" alt="Icon 3" class="li-icon">
+                    </a>
+                </div>
+                <div class="sections">
+                    <a href="#Projects" class="scroll-button">Projects</a>
+                    <a href="#Teaching" class="scroll-button">Teaching</a>
+                    <a href="#Other" class="scroll-button">Other</a>
+                </div>
+            </div>
+            <div class="headshot_div">
+                <img src="imgs/headshot.png" alt="Headshot" class="headshot">
+            </div>
+            
+        </div>
 
-    
-</body>
-</html>
+    </header>
+    <main>
+        <div id="About" class="About">
+            <h2>About</h2>
+            <p>I’m a senior at Yale majoring in computer science.
+                I’m broadly interested in machine learning and its applications in healthcare.
+                I’m fortunate to be working in <a href="https://aneja-lab.org/" class="link">Sanjay Aneja’s lab</a> at the Yale School of Medicine
+                and completing a senior thesis in the Yale department of computer science advised
+                by <a href="https://dannyrakita.net/" class="link">Daniel Rakita</a>.</p>
+        </div>
+        <div id="Projects" class="Projects">
+            <h2 class="project-header">What I've been working on recently . . . </h2>
+            <p class="project_text">[1] Evaluating the Adversarial Robustness of Capsule Networks for Medical Classification Tasks <br>
+                [2] Graph Neural Network Learning on the Structural Connectome (under review) <br>
+                [3] 3D Scene Reconstruction for IMA Division Robotic Surgery <a href="senior-thesis.pdf" class="link">[working draft]</a></p>
+        </div>
+        <div class="not-init-visible">
+            <div id="Teaching" class="Teaching">
+                <h2>Teaching</h2>
+                <div class="teaching-pos">
+                    <p class="teaching-pos-header">Teaching Assistant, Intro to Computer Science (CS50) — Yale University</p>
+                    <p class="teaching-pos-date">Fall 2024</p>
+                    <p class="teaching-pos-description">I led a section covering introductory topics in C,
+                        Python, SQL, Html, CSS, JS, and Flask.</p>
+                </div>
+                <div class="teaching-pos">
+                    <p class="teaching-pos-header">Teaching Assistant, Data Structures & Algorithms (CS223) — Yale University</p>
+                    <p class="teaching-pos-date">Spring 2023, Fall 2023</p>
+                    <p class="teaching-pos-description">I hosted weekly office hours encompassing the implementation and
+                        design of standard data structures and algorithms.</p>
+                </div>
+                <div class="teaching-pos">
+                    <p class="teaching-pos-header">Teaching Intern, Intro to Computer Science — Choate Rosemary Hall</p>
+                    <p class="teaching-pos-date">Summer 2023</p>
+                    <p class="teaching-pos-description">I co taught a high school computer science coarse covering
+                        introductory topics in Python, Html, CSS, and JS.</p>
+                </div>
+
+            </div>
+            <div id="Other" class="Other">
+                <h2>Other things I like:</h2>
+                <p>When I’m not in the lab, you can find me doing improv with the <a href="https://www.purplecrayonofyale.com/" class="link" id="purple-crayon-link">Purple Crayon</a> or
+                    playing some type of recreational sport like soccer, frisbee, or pickle ball.
+                    I also enjoy playing <a href="https://lichess.org/@/anandsrinivasan" class="link">chess</a>, <a href="https://www.goodreads.com/user/show/145636535-anand-srinivasan" class="link">reading</a>,
+                    and listening to podcasts!</p>
+            </div>
+            <p class="citation">This website's design was inspired by a few others [<a href="https://slim.computer/" class="citation-link">1</a>],
+                [<a href="https://dmshanmugam.github.io/" class="citation-link">2</a>], [<a href="https://www.karthiksrinivasan.org/" class="citation-link">3</a>].</p>
+            <div class="end-rect"></div>
+        </div>
+    </main>

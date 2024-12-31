@@ -1,0 +1,488 @@
+/* 
+Document Structure
+--Fonts
+--Basic html, body 
+--Header
+--Main
+--Mobile
+*/
+
+/* FONTS */
+
+/* Define AR-One-Sans Normal */
+@font-face {
+    font-family: 'AR One Sans';
+    src: url('fonts/AR_One_Sans/static/AROneSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Define AR-One-Sans Semi-Bold */
+@font-face {
+    font-family: 'AR One Sans';
+    src: url('fonts/AR_One_Sans/static/AROneSans-SemiBold.ttf') format('truetype');
+    font-weight: 700; /* Use 600 for semi-bold weight */
+    font-style: normal;
+}
+
+/* Define Roboto Thin */
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto/Roboto-Thin.ttf') format('truetype');
+    font-weight: 100; /* Use 600 for semi-bold weight */
+    font-style: normal;
+}
+
+
+/* DEFINE BASIC HTML, BODY STYLING */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures consistent box sizing */
+    background-color: #F4F8F3;
+    scroll-behavior: smooth;
+}
+
+a, a:visited {
+    color: inherit; /* Or specify the color you want */
+    text-decoration: none; /* Optional: Remove underlines */
+}
+
+
+/* DEFINE HEADER STYLING */
+
+/* Top blue rectangle */
+.rect {
+    width: 100vw;
+    height: 18vw;
+    flex-shrink: 0; /* Prevent shrinking */
+    margin: 0 auto; /* Center the rectangle horizontally */
+    position: relative;
+    top: 0;
+    left: 0;
+    background: rgba(182, 204, 215, 0.4);
+    display: flex;
+    justify-content: center;
+}
+
+.name_and_info {
+    width: 40vw;
+    height: 13vw;
+    flex-shrink: 0; /* Prevent shrinking */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start; /* Center vertically */
+    /* background-color: red; */
+}
+
+.name_and_info > *:nth-child(n+3) {
+    margin-top: 0.5vw; /* Add extra space to all items starting from the 3rd child */
+}
+
+.name_and_info > *:nth-child(n+5) {
+    margin-top: 2.5vw; /* Add extra space before scroll buttons */
+}
+
+/* Styling Anand Srinivasan text */
+h1 {
+    width: 100%;
+    color: rgba(37, 30, 32, 0.80);
+    font-family: "AR One Sans";
+    font-size: 4.5vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+}
+
+/* Styling email text */
+h3 {
+    width: 100%;
+    color: rgba(37, 30, 32, 0.70);
+    font-family: "AR One Sans";
+    font-size: 1.5vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+}
+
+.horizontal_line {
+    width: 95%;
+    border: 0.15vw solid #F4F8F3;
+    margin: 0;
+}
+
+/* Styling icon links */
+.icons {
+    width: 80%;
+    height: 1.5vw;
+    /* border: 1px solid black; */
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.gh-icon {
+    width: 1.25vw;
+    height: 1.25vw;
+    margin: 0;
+}
+
+.doc-icon {
+    width: 1.25vw;
+    height: 1.25vw;
+    margin: 0;
+}
+
+.li-icon {
+    width: 1.5vw;
+    height: 1.5vw;
+    margin: 0;
+}
+
+/* Styling scroll buttons */
+.sections {
+    width: 80%;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.scroll-button {
+    color: #303465;
+    font-family: "AR One Sans";
+    font-size: 1.3vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    background: rgba(0, 0, 128, 0.20);
+    
+}
+
+.scroll-button:hover {
+    background: rgba(0, 0, 128, 0.30);
+}
+
+/* Styling headshot photo */
+.headshot { 
+    width: 16vw;
+    height: 16vw;
+    border-radius: 16vw;
+    border: 0.2vw solid #F4F8F3;
+    margin-top: 0.3vw;
+    flex-shrink: 0;
+}
+
+
+/* DEFINE MAIN STYLING */
+
+/* Main texts */
+h2 {
+    color: #251E20;
+    font-family: Roboto;
+    font-size: 2.5vw;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
+    margin: 0;
+}
+
+p {
+    color: #251E20;
+    font-family: "AR One Sans";
+    font-size: 1.3vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2vw;
+    margin-top: 0.5vw;
+    margin-bottom: 0;
+}
+
+/* Section divs */
+.About {
+    margin-top: 7vh;
+    margin-left: 21.9vw;
+    margin-right: 22.9vw;
+}
+
+.Projects {
+    margin-top: 7vh;
+    margin-left: 21.9vw;
+    margin-right: 15vw;
+}
+
+/* Make sure Teaching and Other divs are not initially visible */
+.not-init-visible {
+    position: absolute;
+    top: 100%; /* Places it just below the visible screen */
+    left: 0;
+    width: 100%; /* Ensure it spans the full width */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 0;
+}
+
+.Teaching {
+    margin-top: 0;
+    margin-left: 21.9vw;
+    margin-right: 21.9vw;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.Other {
+    margin-top: 7vh;
+    margin-left: 21.9vw;
+    margin-right: 21.9vw;
+}
+
+
+/* Other text related modifications */
+
+.project_text {
+    font-size: 1.3vw;
+    line-height: 2.2vw;
+}
+
+/* Formatting for teaching position listing formatting */
+.teaching-pos-header {
+    font-weight: 700;
+}
+.teaching-pos-date {
+    margin-top: 0vw;
+    font-size: 1vw;
+}
+.teaching-pos-description {
+    margin-top: 0vw;
+    font-size: 1.1vw;
+}
+
+/* Main link formatting */
+.link {
+    background: rgba(138, 206, 0, 0.40);
+    
+}
+
+#purple-crayon-link {
+    background: rgba(176, 38, 255, 0.40);
+}
+
+/* Citations */
+.citation {
+    font-size: 1.1vw;
+    margin-top: 5vw;
+    margin-left: 21.9vw;
+    margin-right: 21.9vw;
+    margin-bottom: 1.5vw;
+}
+
+.citation-link {
+    font-weight: 700;
+}
+
+.end-rect {
+    width: 100%;
+    height: 30vw;
+    /* background: rgba(182, 204, 215, 0.3); */
+    background: rgba(0, 0, 0, 0.3);
+}
+
+
+/* MOBILE ADAPTABILITY */
+
+
+@media (max-width: 700px) {
+    .rect {
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .name_and_info {
+        margin-top: 3vw;
+        width: 90%; /* Full width for better scaling */
+        height: auto; /* Let content determine height */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center horizontally */
+        justify-content: center; /* Center vertically */
+        gap: 2vw; /* Add spacing between children */
+    }
+
+    .name_and_info > *:nth-child(n+3) {
+        margin-top: 0.2vw; /* Add extra space to all items starting from the 3rd child */
+    }
+    
+    .name_and_info > *:nth-child(n+5) {
+        margin-top: 2.5vw; /* Add extra space before scroll buttons */
+    }
+    
+    /* Styling Anand Srinivasan text */
+    h1 {
+        font-size: 7vw;
+        text-align: center; /* Center text */
+    }
+    
+    /* Styling email text */
+    h3 {
+        font-size: 3.5vw;
+        text-align: center; /* Center text */
+    }
+    
+    .horizontal_line {
+        width: 25%;
+        border: 0.15vw solid #F4F8F3;
+    }
+
+    /* Styling icon links */
+    .icons {
+        height: 3.5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5vw;
+    }
+
+    .gh-icon {
+        width: 4vw;
+        height: 4vw;
+    }
+
+    .doc-icon {
+        width: 4vw;
+        height: 4vw;
+    }
+
+    .li-icon {
+        width: 4.25vw;
+        height: 4.25vw;
+    }
+
+    /* Styling scroll buttons */
+    .sections {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3.5vw;
+    }
+
+    .scroll-button {
+        font-size: 3.5vw;
+        
+    }
+
+    .scroll-button:hover {
+        background: rgba(0, 0, 128, 0.30);
+    }
+
+    /* Styling headshot photo */
+    .headshot { 
+        width: 40vw;
+        height: 40vw;
+        border-radius: 40vw;
+        border: 0.2vw solid #F4F8F3;
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+        flex-shrink: 0;
+    }
+
+    /* DEFINE MAIN STYLING */
+
+    /* Main texts */
+    h2 {
+        font-size: 6vw;
+        text-align: center;
+    }
+
+    p {
+        font-size: 3.3vw;
+        line-height: 5vw;
+        margin-top: 1vw;
+        margin-bottom: 0;
+        text-align: justify;
+    }
+
+    /* Section divs */
+    .About {
+        margin-top: 5vh;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    .Projects {
+        margin-top: 8vh;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    .Teaching {
+        margin-top: 0;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .Other {
+        margin-top: 5vh;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    .project-header {
+        font-size: 5.5vw;
+        text-align: left;
+    }
+
+    .project_text {
+        margin-top: 2vw;
+        font-size: 3.3vw;
+        line-height: 5vw;
+    }
+
+    /* Formatting for teaching position listing formatting */
+    .teaching-pos-header {
+        font-weight: 700;
+    }
+    .teaching-pos-date {
+        font-size: 2.8vw;
+    }
+    .teaching-pos-description {
+        font-size: 2.9vw;
+    }
+
+    /* Citations */
+    .citation {
+        font-size: 2.9vw;
+        margin-top: 10vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        margin-bottom: 2vw;
+    }
+
+    .citation-link {
+        font-weight: 700;
+    }
+
+    .end-rect {
+        height: 70vw;
+    }
+}
