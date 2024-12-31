@@ -275,8 +275,16 @@ p {
     
 }
 
+.link:hover {
+    background: rgba(138, 206, 0, 0.60);
+}
+
 #purple-crayon-link {
     background: rgba(176, 38, 255, 0.40);
+}
+
+#purple-crayon-link:hover {
+    background: rgba(176, 38, 255, 0.60);
 }
 
 /* Citations */
